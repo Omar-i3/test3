@@ -579,8 +579,8 @@ document.getElementById('hadithSearchForm').addEventListener('submit', (e)=>{
                 systemInstruction: {
                     parts: [{ text: SYSTEM_INSTRUCTION }]
                 }
-            }) // هنا تم إضافة القوس الناقص } لتقفيل الـ body بشكل سليم
-        }); 
+            })
+        });
 
         const data = await response.json();
 
@@ -599,7 +599,7 @@ document.getElementById('hadithSearchForm').addEventListener('submit', (e)=>{
         appendMessage('عذراً، حدث خطأ في الشبكة الشرعية حالياً.', 'ai');
         console.error(error);
     }
-  }); 
+  });
 
   function appendMessage(text, sender) {
     const msgDiv = document.createElement('div');
