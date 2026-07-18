@@ -576,11 +576,14 @@ document.getElementById('hadithSearchForm').addEventListener('submit', (e)=>{
                 contents: [
                     {
                         role: "user",
-                        parts: [{ text: SYSTEM_INSTRUCTION + "\n\nسؤال المستخدم الحالي: " + userText }]
+                        parts: [{ text: userText }]
                     }
-                ]
+                ],
+                systemInstruction: {
+                    parts: [{ text: SYSTEM_INSTRUCTION }]
+                }
             })
-        }); 
+        });
 
         const data = await response.json();
 
