@@ -575,15 +575,14 @@ document.getElementById('hadithSearchForm').addEventListener('submit', (e)=>{
                 contents: [
                     {
                         role: "user",
-                        parts: [{ text: userText }]
+                        parts: [{ text: userText }] // التعديل الذهبي هنا: صيغة مفرد text
                     }
                 ],
                 system_instruction: {
                     parts: [{ text: SYSTEM_INSTRUCTION }]
                 }
             })
-        }); 
-
+        });
         const data = await response.json();
 
         // إزالة مؤشر التحميل
